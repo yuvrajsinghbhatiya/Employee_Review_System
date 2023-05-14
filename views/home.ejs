@@ -1,0 +1,60 @@
+
+<link rel="stylesheet" href="/css/home.css">
+<br><br>
+<div id="body-container">
+    <div class="border border-dark rounded-4">
+        <div class="w-4 shadow-lg border border-dark rounded-4" >
+            <div class="mx-auto" style="width: 200px;">
+                <h1>To Review</h1>
+            </div>
+        </div>
+        <br>
+        <div >
+            <% for(let r of recipients){ %> 
+                <div class="card no-b rounded-4">
+                    <div class="card-body">
+                      <h4 class="card-title"><b>To: <%= r?.name %></b></h4>
+                      <form action="/reviews/newReview/<%= r?._id %>" method="get">
+                        <textarea
+                        class="form-control"
+                        id="floatingTextarea2"
+                        style="height: 100px"
+                        name="newReview"
+                        rows="5">
+                        </textarea>
+                        <br>
+                        <div class="m-10">
+                            <center>
+                                <button type="submit" class="btn btn-dark">submit </button>
+                            </center>
+                        </div>
+                      </form>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </div>
+    <div class="w-4 border border-dark rounded-4">
+        
+        <div class="shadow-lg border border-dark rounded-4" >
+            <div class="mx-auto" style="width: 250px;">
+                <h1>My Reviews</h1>
+            </div>
+        </div>
+        <br>
+        <div >
+            <% for(let i = 0; i < reviews.length; i++) { %>
+                <div class="card ">
+                    <div class="card-body">
+                      <h5 class="card-title">From : <%= reviews[i].name %></h5>
+                      <p class="card-text">message : <%= reviews[i].review %></p>
+                      </form>
+                    </div>
+                </div>
+                <br>
+            <% } %>
+        </div>
+    </div>
+        
+</div>
+<br><br>

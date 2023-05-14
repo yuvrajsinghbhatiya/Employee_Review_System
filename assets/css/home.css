@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#body-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.no-b{
+    border: 0px solid white;
+}
+
+#body-container > div{
+    width: 40%;
+    background-color: #f2f2f2;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.right-alligned{
+    display: flex;
+    justify-content: end;
+}
+
+.m-10{
+    margin:10px;
+}
